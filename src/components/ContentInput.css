@@ -1,0 +1,261 @@
+.content-input-container {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.input-section {
+  margin-bottom: 2rem;
+}
+
+.input-label {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+.content-textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+  transition: border-color 0.3s;
+}
+
+.content-textarea:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.char-count {
+  text-align: right;
+  margin-top: 0.5rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.operations-section {
+  margin-bottom: 2rem;
+}
+
+.operations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.operation-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.25rem 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #f9f9f9;
+}
+
+.operation-card:hover {
+  border-color: #667eea;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+.operation-card.selected {
+  border-color: #667eea;
+  background: linear-gradient(135deg, #667eea15, #764ba215);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.op-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.op-label {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
+  text-align: center;
+  margin-bottom: 0.25rem;
+}
+
+.op-description {
+  font-size: 0.75rem;
+  color: #666;
+  text-align: center;
+}
+
+.translate-section {
+  margin-bottom: 2rem;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.language-input {
+  width: 100%;
+  padding: 0.875rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.language-input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.875rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  flex: 1;
+  min-width: 200px;
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: #e0e0e0;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ffffff50;
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .content-input-container {
+    padding: 1.5rem;
+  }
+
+  .operations-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .operation-card {
+    padding: 1rem 0.75rem;
+  }
+
+  .op-icon {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+.tone-section {
+  margin-bottom: 2rem;
+}
+
+.tone-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.tone-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #f9f9f9;
+}
+
+.tone-option:hover {
+  border-color: #10b981;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+}
+
+.tone-option.selected {
+  border-color: #10b981;
+  background: linear-gradient(135deg, #10b98115, #059669 15);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.tone-icon {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.tone-label {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .tone-grid {
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 0.75rem;
+  }
+}

@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #f0f4ff, #ffffff);
+}
+
+.main-content {
+  padding: 2rem 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.error-message {
+  background: #fee;
+  border: 2px solid #fcc;
+  color: #c33;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1rem 0.5rem;
+  }
+}

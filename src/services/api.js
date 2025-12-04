@@ -3,7 +3,7 @@ const API_BASE_KEY = import.meta.env.VITE_API_BASE_KEY ;
 
 export const processContent = async (content, operation, targetLanguage = '', tone = 'professional') => {
   try {
-    const endpoint = `${API_BASE_URL}/research/process`;
+    const endpoint = `${API_BASE_URL}/process`;
     
     const requestBody = {
       content: content,

@@ -16,7 +16,6 @@ export const processContent = async (content, operation, targetLanguage = '', to
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'X-goog-api-key': API_BASE_KEY
       },
       body: JSON.stringify(requestBody),
     });

@@ -3,7 +3,7 @@ const API_BASE_KEY = import.meta.env.VITE_API_BASE_KEY ;
 
 export const processContent = async (content, operation, targetLanguage = '', tone = 'professional') => {
   try {
-    const endpoint = `${API_BASE_URL}/process`;
+    const endpoint = `${API_BASE_URL}/research/process`;
     
     const requestBody = {
       content: content,
@@ -16,6 +16,7 @@ export const processContent = async (content, operation, targetLanguage = '', to
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'X-goog-api-key': API_BASE_KEY
       },
       body: JSON.stringify(requestBody),
     });
